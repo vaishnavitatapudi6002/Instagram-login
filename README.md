@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instagram Login</title>
+<title>Instagram Login Clone</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#f2f2f2;
+    background:#fafafa;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -22,90 +22,113 @@ body{
 }
 
 .container{
-    width:600px;
+    width:350px;
+}
+
+.login-box{
+    background:#fff;
+    border:1px solid #dbdbdb;
+    padding:40px;
     text-align:center;
 }
 
 .logo-img{
-    width:140px;
-    margin-bottom:15px;
+    width:90px;
+    height:auto;
+    margin-bottom:10px;
 }
 
 .logo-text{
-    font-size:80px;
-    font-weight:900;
-    color:#000;
-    margin-bottom:35px;
+    font-size:55px;
     font-family:cursive;
+    color:#000;
+    margin-bottom:25px;
 }
 
 input{
     width:100%;
-    padding:18px 20px;
-    margin-bottom:22px;
-    border:1px solid #d3d3d3;
+    padding:12px;
+    margin:6px 0;
+    border:1px solid #dbdbdb;
     border-radius:4px;
-    font-size:18px;
-    background:white;
+    background:#fafafa;
+    font-size:14px;
 }
 
 .login-btn{
     width:100%;
+    padding:10px;
+    margin-top:12px;
     border:none;
-    background:#1696f4;
+    border-radius:8px;
+    background:#0095f6;
     color:white;
-    padding:18px;
-    font-size:22px;
     font-weight:bold;
-    border-radius:18px;
+    font-size:15px;
     cursor:pointer;
 }
 
 .login-btn:hover{
-    opacity:0.9;
+    background:#1877f2;
 }
 
 .or{
     display:flex;
     align-items:center;
-    justify-content:center;
-    margin:35px 0;
-    color:#888;
-    font-size:20px;
+    text-align:center;
+    margin:20px 0;
+    color:#8e8e8e;
+    font-size:13px;
+    font-weight:bold;
 }
 
 .or::before,
 .or::after{
     content:"";
     flex:1;
-    height:2px;
-    background:#999;
+    border-bottom:1px solid #dbdbdb;
 }
 
 .or::before{
-    margin-right:15px;
+    margin-right:10px;
 }
 
 .or::after{
-    margin-left:15px;
+    margin-left:10px;
 }
 
-.forgot{
+.forgot a{
     text-decoration:none;
     color:#00376b;
-    font-size:20px;
+    font-size:12px;
 }
 
-@media(max-width:700px){
-
-.container{
-    width:90%;
+.signup{
+    background:#fff;
+    border:1px solid #dbdbdb;
+    text-align:center;
+    padding:20px;
+    margin-top:10px;
+    font-size:14px;
 }
 
-.logo-text{
-    font-size:70px;
+.signup a{
+    text-decoration:none;
+    color:#0095f6;
+    font-weight:bold;
 }
 
+.footer{
+    text-align:center;
+    margin-top:20px;
+    color:#8e8e8e;
+    font-size:12px;
+}
+
+@media(max-width:400px){
+    .container{
+        width:95%;
+    }
 }
 </style>
 </head>
@@ -114,27 +137,44 @@ input{
 
 <div class="container">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-class="logo-img"
-alt="Instagram">
+    <div class="login-box">
 
-<h1 class="logo-text">Instagram</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+        alt="Instagram Logo"
+        class="logo-img">
 
-<input type="text"
-placeholder="Phone number, username, or email">
+        <div class="logo-text">Instagram</div>
 
-<input type="password"
-placeholder="Password">
+        <form>
+            <input type="text"
+            placeholder="Phone number, username, or email"
+            required>
 
-<button class="login-btn">
-Log In
-</button>
+            <input type="password"
+            placeholder="Password"
+            required>
 
-<div class="or">OR</div>
+            <button type="submit" class="login-btn">
+                Log In
+            </button>
+        </form>
 
-<a href="#" class="forgot">
-Forgot password?
-</a>
+        <div class="or">OR</div>
+
+        <div class="forgot">
+            <a href="#">Forgot password?</a>
+        </div>
+
+    </div>
+
+    <div class="signup">
+        Don't have an account?
+        <a href="#">Sign up</a>
+    </div>
+
+    <div class="footer">
+        © 2026 Instagram Clone Project
+    </div>
 
 </div>
 
