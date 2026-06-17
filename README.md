@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instagram</title>
+<title>Instagram Login</title>
 
 <style>
 *{
@@ -14,121 +14,129 @@
 }
 
 body{
-    background:#fafafa;
+    background:#f2f2f2;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    min-height:100vh;
 }
 
 .container{
-    width:350px;
-}
-
-.login-box{
-    background:white;
-    border:1px solid #dbdbdb;
-    padding:40px;
+    width:600px;
     text-align:center;
 }
 
-.logo img{
-    width:90px;
-    margin-bottom:10px;
+.logo-img{
+    width:140px;
+    margin-bottom:15px;
 }
 
-.logo h1{
+.logo-text{
+    font-size:80px;
+    font-weight:900;
+    color:#000;
+    margin-bottom:35px;
     font-family:cursive;
-    font-size:42px;
-    margin-bottom:25px;
 }
 
 input{
     width:100%;
-    padding:10px;
-    margin:6px 0;
-    border:1px solid #dbdbdb;
-    border-radius:3px;
-    background:#fafafa;
+    padding:18px 20px;
+    margin-bottom:22px;
+    border:1px solid #d3d3d3;
+    border-radius:4px;
+    font-size:18px;
+    background:white;
 }
 
-button{
+.login-btn{
     width:100%;
-    padding:10px;
     border:none;
-    border-radius:8px;
-    background:#0095f6;
+    background:#1696f4;
     color:white;
+    padding:18px;
+    font-size:22px;
     font-weight:bold;
+    border-radius:18px;
     cursor:pointer;
-    margin-top:10px;
 }
 
-button:hover{
-    background:#1877f2;
+.login-btn:hover{
+    opacity:0.9;
 }
 
 .or{
-    margin:20px 0;
-    color:#8e8e8e;
-    font-size:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:35px 0;
+    color:#888;
+    font-size:20px;
+}
+
+.or::before,
+.or::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:#999;
+}
+
+.or::before{
+    margin-right:15px;
+}
+
+.or::after{
+    margin-left:15px;
 }
 
 .forgot{
-    margin-top:15px;
-}
-
-.forgot a{
     text-decoration:none;
     color:#00376b;
-    font-size:12px;
+    font-size:20px;
 }
 
-.signup{
-    background:white;
-    border:1px solid #dbdbdb;
-    text-align:center;
-    padding:20px;
-    margin-top:10px;
+@media(max-width:700px){
+
+.container{
+    width:90%;
 }
 
-.signup a{
-    text-decoration:none;
-    color:#0095f6;
-    font-weight:bold;
+.logo-text{
+    font-size:70px;
+}
+
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
-    <div class="login-box">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+class="logo-img"
+alt="Instagram">
 
-        <div class="logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            <h1>Instagram</h1>
-        </div>
+<h1 class="logo-text">Instagram</h1>
 
-        <input type="text" placeholder="Phone number, username, or email">
-        <input type="password" placeholder="Password">
+<input type="text"
+placeholder="Phone number, username, or email">
 
-        <button>Log In</button>
+<input type="password"
+placeholder="Password">
 
-        <div class="or">──────── OR ────────</div>
+<button class="login-btn">
+Log In
+</button>
 
-        <div class="forgot">
-            <a href="#">Forgot password?</a>
-        </div>
+<div class="or">OR</div>
 
-    </div>
-
-    <div class="signup">
-        Don't have an account?
-        <a href="#">Sign up</a>
-    </div>
+<a href="#" class="forgot">
+Forgot password?
+</a>
 
 </div>
 
 </body>
-</html># Instagram-login
+</html>
