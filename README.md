@@ -10,7 +10,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -34,8 +34,8 @@ body{
 
 .logo-img{
     width:90px;
-    height:auto;
-    margin-bottom:10px;
+    display:block;
+    margin:0 auto 10px;
 }
 
 .logo-text{
@@ -45,7 +45,7 @@ body{
     margin-bottom:25px;
 }
 
-input{
+.input-box{
     width:100%;
     padding:12px;
     margin:6px 0;
@@ -62,9 +62,9 @@ input{
     border:none;
     border-radius:8px;
     background:#0095f6;
-    color:white;
+    color:#fff;
+    font-size:14px;
     font-weight:bold;
-    font-size:15px;
     cursor:pointer;
 }
 
@@ -75,7 +75,6 @@ input{
 .or{
     display:flex;
     align-items:center;
-    text-align:center;
     margin:20px 0;
     color:#8e8e8e;
     font-size:13px;
@@ -97,13 +96,24 @@ input{
     margin-left:10px;
 }
 
+.fb-login{
+    text-decoration:none;
+    color:#385185;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.forgot{
+    margin-top:15px;
+}
+
 .forgot a{
     text-decoration:none;
     color:#00376b;
     font-size:12px;
 }
 
-.signup{
+.signup-box{
     background:#fff;
     border:1px solid #dbdbdb;
     text-align:center;
@@ -112,9 +122,9 @@ input{
     font-size:14px;
 }
 
-.signup a{
-    text-decoration:none;
+.signup-box a{
     color:#0095f6;
+    text-decoration:none;
     font-weight:bold;
 }
 
@@ -126,9 +136,19 @@ input{
 }
 
 @media(max-width:400px){
-    .container{
-        width:95%;
-    }
+
+.container{
+    width:95%;
+}
+
+.login-box{
+    padding:25px;
+}
+
+.logo-text{
+    font-size:48px;
+}
+
 }
 </style>
 </head>
@@ -139,41 +159,56 @@ input{
 
     <div class="login-box">
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+        <img
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
         alt="Instagram Logo"
         class="logo-img">
 
-        <div class="logo-text">Instagram</div>
+        <h1 class="logo-text">Instagram</h1>
 
         <form>
-            <input type="text"
+
+            <input
+            type="text"
+            class="input-box"
             placeholder="Phone number, username, or email"
             required>
 
-            <input type="password"
+            <input
+            type="password"
+            class="input-box"
             placeholder="Password"
             required>
 
-            <button type="submit" class="login-btn">
-                Log In
+            <button
+            type="submit"
+            class="login-btn">
+            Log In
             </button>
+
         </form>
 
         <div class="or">OR</div>
 
+        <a href="#" class="fb-login">
+            Log in with Facebook
+        </a>
+
         <div class="forgot">
-            <a href="#">Forgot password?</a>
+            <a href="#">
+                Forgot password?
+            </a>
         </div>
 
     </div>
 
-    <div class="signup">
+    <div class="signup-box">
         Don't have an account?
         <a href="#">Sign up</a>
     </div>
 
     <div class="footer">
-        © 2026 Instagram Clone Project
+        © 2026 Instagram Clone Project | Created by Vaishnavi Tatapudi
     </div>
 
 </div>
