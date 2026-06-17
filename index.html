@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: white;
+            border: 1px solid #dbdbdb;
+            padding: 40px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: cursive;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #0077cc;
+        }
+
+        .forgot {
+            margin-top: 15px;
+            font-size: 12px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #00376b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h1>Instagram</h1>
+
+    <form>
+        <input type="text" placeholder="Phone number, username, or email" required>
+        <input type="password" placeholder="Password" required>
+
+        <button type="submit">Log In</button>
+    </form>
+
+    <div class="forgot">
+        <a href="#">Forgot password?</a>
+    </div>
+</div>
+
+</body>
+</html>
